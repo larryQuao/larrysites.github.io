@@ -2,6 +2,8 @@
 @import url("careers.css");
 @import url("games.css");
 @import url("contact.css");
+/*Impoting fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 *,
 *::before,
 *::after {
@@ -47,6 +49,149 @@ h6 {
 }
 p {
   font-family: var(--f2);
+}
+/*Games*/
+.games{
+  padding: 0px 100px;
+  width: 100%;
+  min-width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px auto;
+}
+
+.games h2{
+  color:#000;
+  margin: 10px 0;
+}
+
+.games ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.games ul li{
+  list-style: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #000;
+}
+
+.games ul li.active{
+  background: rgb(37, 37, 47);
+  color: #1b2141;
+  box-shadow: 0 0 10px rgb(37, 37, 47);
+}
+
+.games .cardbox{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.games .cardbox .card{
+  width: 280px;
+  border-radius: 10px;
+  margin: 20px 40px;
+  background: #1b2141;
+  overflow: hidden;
+}
+
+.games .cardbox .card img {
+  width:100%;
+  height: fit-content;
+  object-fit: cover;
+}
+
+.games .cardbox .card .content {
+  padding: 10px;
+}
+
+.games .cardbox .card .content h4{
+  color: #000;
+  margin: 15px 0;
+}
+
+.games .cardbox .card .progress-line{
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: #35407e;
+  margin-top: 15px;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.games .cardbox .card .progress-line span{
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  border-radius: 10px;
+  background: rgb(37, 37, 47);
+  box-shadow: 0 0 10px rgba(37, 37, 47);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate {
+  100%{
+      transform: scaleX(1);
+  }
+}
+
+.games .cardbox .card .info{
+  border-top: 2px solid #35407e;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.games .cardbox .card .info p
+{
+  font-size: 1em;
+  color:#000;
+}
+
+.games .cardbox .card .info p span{
+  color:#1aeeef;
+}
+
+.games .cardbox .card .info a{
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: 1px solid #1aeeef;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.games .cardbox .card .info a:hover{
+  background: rgb(181, 181, 202);
+  border: none;
+  color: #1b2141;
+  box-shadow: 0 0 10px rgb(181, 181, 202);
+}
+
+.games .cardbox .card .hide {
+  display: none;
+
 }
 @media (max-width: 800px) {
   .page-title h1 {
@@ -151,6 +296,63 @@ p {
 .nav-socials a:active,
 .nav-socials a:focus {
   color: var(--c4);
+}
+/*Footer*/
+footer {
+  padding: 10px 100px;
+  background: #1b2141;
+}
+
+footer .info{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+footer .info .logo{
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+footer .info p{
+  color: #dbd9d9;
+}
+
+footer .info ul{
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .info ul li{
+  list-style: none;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(181, 181, 202);
+}
+
+footer .info ul li:hover{
+  background: rgb(181, 181, 202);
+  border: none;
+  box-shadow: 0 0 10px rgb(181, 181, 202);
+}
+
+footer .info ul li a i{
+  font-size:1.7em;
+  color: #fff;
+}
+
+footer .info ul li:hover a i{
+  color: #050e2d;
 }
 @media (max-width: 800px) {
   .burger {
