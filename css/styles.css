@@ -352,7 +352,7 @@ footer .info ul li a i{
 }
 
 footer .info ul li:hover a i{
-  color: #050e2d;
+  color: #e0e2e9;
 }
 @media (max-width: 800px) {
   .burger {
